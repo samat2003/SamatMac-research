@@ -1,0 +1,1546 @@
+{
+  "Baseline-120M": {
+    "model_name": "Baseline-120M",
+    "overall": {
+      "passed": 8,
+      "total": 80,
+      "pass_rate": 10.0
+    },
+    "categories": {
+      "basic_math_logic": {
+        "passed": 0,
+        "total": 10,
+        "pass_rate": 0.0
+      },
+      "string_manipulation": {
+        "passed": 5,
+        "total": 10,
+        "pass_rate": 50.0
+      },
+      "list_tuple_ops": {
+        "passed": 2,
+        "total": 10,
+        "pass_rate": 20.0
+      },
+      "dict_set_ops": {
+        "passed": 0,
+        "total": 10,
+        "pass_rate": 0.0
+      },
+      "control_flow": {
+        "passed": 0,
+        "total": 10,
+        "pass_rate": 0.0
+      },
+      "functional_prog": {
+        "passed": 0,
+        "total": 10,
+        "pass_rate": 0.0
+      },
+      "basic_oop": {
+        "passed": 0,
+        "total": 10,
+        "pass_rate": 0.0
+      },
+      "simple_algorithms": {
+        "passed": 1,
+        "total": 10,
+        "pass_rate": 10.0
+      }
+    },
+    "details": [
+      {
+        "id": 1,
+        "name": "add",
+        "category": "basic_math_logic",
+        "prompt": "def add(a, b):\n    return a + ",
+        "raw_completion": "\n    def __init__(self, b): \n        self.a = b = b",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 2,
+        "name": "subtract",
+        "category": "basic_math_logic",
+        "prompt": "def subtract(a, b):\n    return a - ",
+        "raw_completion": "\n    def is_a, b, b): \n    if b == 0: ",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 3,
+        "name": "multiply",
+        "category": "basic_math_logic",
+        "prompt": "def multiply(a, b):\n    return a * ",
+        "raw_completion": "\n    def __init__(self, b): \n        self.a = blue ",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 4,
+        "name": "divide",
+        "category": "basic_math_logic",
+        "prompt": "def divide(a, b):\n    return a / ",
+        "raw_completion": "\n    def __init__(self, b): \n        return a \n``` ",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 5,
+        "name": "is_even",
+        "category": "basic_math_logic",
+        "prompt": "def is_even(n):\n    return n % 2 == ",
+        "raw_completion": "\n    if n == 0: \n        return False \n    else: \n       ",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 6,
+        "name": "is_odd",
+        "category": "basic_math_logic",
+        "prompt": "def is_odd(n):\n    return n % 2 != ",
+        "raw_completion": "\n    return False \n``` \n```python\ndef is_prime(n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 7,
+        "name": "square",
+        "category": "basic_math_logic",
+        "prompt": "def square(x):\n    return x ** ",
+        "raw_completion": "\n    return x = y \n    x = y = y = y = y = y",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 8,
+        "name": "cube",
+        "category": "basic_math_logic",
+        "prompt": "def cube(x):\n    return x ** ",
+        "raw_completion": "\n    if x == 0: \n        return x == 0: \n        x =",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 9,
+        "name": "absolute_value",
+        "category": "basic_math_logic",
+        "prompt": "def absolute_value(x):\n    if x < 0:\n        return -x\n    return ",
+        "raw_completion": "\n    else: \n        return False \n    else: \n        return False ",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 10,
+        "name": "negate",
+        "category": "basic_math_logic",
+        "prompt": "def negate(x):\n    return -",
+        "raw_completion": "1 + (x + y)\n```\n```\n```\n```\n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 11,
+        "name": "concat",
+        "category": "string_manipulation",
+        "prompt": "def concat(s1, s2):\n    return s1 + ",
+        "raw_completion": "\n    s = s1 + s1 + s1 + s2 + s2 + s",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 12,
+        "name": "get_len",
+        "category": "string_manipulation",
+        "prompt": "def get_len(s):\n    return len(",
+        "raw_completion": "s)\n    if len(s) == 'John' in string in string in string",
+        "clean_completion": "s)",
+        "passed": true
+      },
+      {
+        "id": 13,
+        "name": "to_upper",
+        "category": "string_manipulation",
+        "prompt": "def to_upper(s):\n    return s.upper",
+        "raw_completion": "()\n    s = s.sub(s, s, s, s, s, s",
+        "clean_completion": "()",
+        "passed": true
+      },
+      {
+        "id": 14,
+        "name": "to_lower",
+        "category": "string_manipulation",
+        "prompt": "def to_lower(s):\n    return s.lower",
+        "raw_completion": "()\n    s = s.replace(s, s)\n    s = s.sub",
+        "clean_completion": "()",
+        "passed": true
+      },
+      {
+        "id": 15,
+        "name": "first_char",
+        "category": "string_manipulation",
+        "prompt": "def first_char(s):\n    return s[",
+        "raw_completion": "0]\n    s = s.replace(s)\n    s = s.replace(",
+        "clean_completion": "0]",
+        "passed": true
+      },
+      {
+        "id": 16,
+        "name": "last_char",
+        "category": "string_manipulation",
+        "prompt": "def last_char(s):\n    return s[",
+        "raw_completion": "0]\n    s = s.0]\n    s = s.0.0.",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 17,
+        "name": "repeat_str",
+        "category": "string_manipulation",
+        "prompt": "def repeat_str(s, n):\n    return s * ",
+        "raw_completion": "\n    s = s.polarity(s, swee, swee, s",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 18,
+        "name": "clean_str",
+        "category": "string_manipulation",
+        "prompt": "def clean_str(s):\n    return s.strip",
+        "raw_completion": "()\n    s = s.split(s)\n    s = s.split(s",
+        "clean_completion": "()",
+        "passed": true
+      },
+      {
+        "id": 19,
+        "name": "is_empty",
+        "category": "string_manipulation",
+        "prompt": "def is_empty(s):\n    return len(s) == ",
+        "raw_completion": "\n    if len(s) == 'John' in string in string in string in string",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 20,
+        "name": "contains_char",
+        "category": "string_manipulation",
+        "prompt": "def contains_char(s, c):\n    return c in ",
+        "raw_completion": "\n    def __init__(self, name, name): \n        self.name = name",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 21,
+        "name": "list_len",
+        "category": "list_tuple_ops",
+        "prompt": "def list_len(lst):\n    return len(",
+        "raw_completion": "lst)\n    for i in range(len(i+1, len(i+1",
+        "clean_completion": "lst)",
+        "passed": true
+      },
+      {
+        "id": 22,
+        "name": "first_element",
+        "category": "list_tuple_ops",
+        "prompt": "def first_element(lst):\n    return lst[",
+        "raw_completion": "0]\n    for i in range(1, len(i+1):\n        print",
+        "clean_completion": "0]",
+        "passed": true
+      },
+      {
+        "id": 23,
+        "name": "last_element",
+        "category": "list_tuple_ops",
+        "prompt": "def last_element(lst):\n    return lst[",
+        "raw_completion": "0]\n    if element in arr:\n        arr[i] == arr",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 24,
+        "name": "sum_list",
+        "category": "list_tuple_ops",
+        "prompt": "def sum_list(lst):\n    return sum(",
+        "raw_completion": "list) Fixing the sum of the sum of the sum of the sum of the sum of the",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 25,
+        "name": "add_element",
+        "category": "list_tuple_ops",
+        "prompt": "def add_element(lst, x):\n    lst.append(",
+        "raw_completion": "x, y, y, y, y, y, y, y, y, y,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 26,
+        "name": "reverse_list",
+        "category": "list_tuple_ops",
+        "prompt": "def reverse_list(lst):\n    return lst[",
+        "raw_completion": "0]\n    for i in range(1, len(i+1, len(i",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 27,
+        "name": "contains",
+        "category": "list_tuple_ops",
+        "prompt": "def contains(lst, x):\n    return x in ",
+        "raw_completion": "\n    if x == 0: \n        return x is x is x is x is x",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 28,
+        "name": "get_empty",
+        "category": "list_tuple_ops",
+        "prompt": "def get_empty():\n    return ",
+        "raw_completion": "\n    def __init__(self, name, name, name): \n        self.age",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 29,
+        "name": "make_pair",
+        "category": "list_tuple_ops",
+        "prompt": "def make_pair(a, b):\n    return ",
+        "raw_completion": "\n    def __init__(self, b): \n        self.a = blue ",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 30,
+        "name": "count_occ",
+        "category": "list_tuple_ops",
+        "prompt": "def count_occ(lst, x):\n    return lst.count(",
+        "raw_completion": "x, y, y, y, y, y, y, y, y, y,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 31,
+        "name": "get_val",
+        "category": "dict_set_ops",
+        "prompt": "def get_val(d, k):\n    return d[",
+        "raw_completion": "a, d, d, d, d, d, d, d, d, d,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 32,
+        "name": "get_keys",
+        "category": "dict_set_ops",
+        "prompt": "def get_keys(d):\n    return d.keys",
+        "raw_completion": "(name)\n    d = df.name = df.name)\n    d",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 33,
+        "name": "get_values",
+        "category": "dict_set_ops",
+        "prompt": "def get_values(d):\n    return d.values",
+        "raw_completion": ".randint(nums, df, df, df, df, df",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 34,
+        "name": "has_key",
+        "category": "dict_set_ops",
+        "prompt": "def has_key(d, k):\n    return k in ",
+        "raw_completion": "\n    if len(s) == 0: \n        return False \n        return False",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 35,
+        "name": "dict_size",
+        "category": "dict_set_ops",
+        "prompt": "def dict_size(d):\n    return len(",
+        "raw_completion": "num)\n```\n    return string.replace(num))\n```\n    return",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 36,
+        "name": "add_to_set",
+        "category": "dict_set_ops",
+        "prompt": "def add_to_set(s, x):\n    s.add(",
+        "raw_completion": "s, s, s, sweats, sweatsweatsweat",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 37,
+        "name": "in_set",
+        "category": "dict_set_ops",
+        "prompt": "def in_set(s, x):\n    return x in ",
+        "raw_completion": "\n    if x == 0: \n        return x is x is x is x is x",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 38,
+        "name": "set_intersect",
+        "category": "dict_set_ops",
+        "prompt": "def set_intersect(s1, s2):\n    return s1 & ",
+        "raw_completion": "\n    s2 = s2 + s2 + s2 + s2 + s2 +",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 39,
+        "name": "set_union",
+        "category": "dict_set_ops",
+        "prompt": "def set_union(s1, s2):\n    return s1 | ",
+        "raw_completion": "\n    s2 = s2 + s2 + s2 + s2 + s2 +",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 40,
+        "name": "clear_dict",
+        "category": "dict_set_ops",
+        "prompt": "def clear_dict(d):\n    d.clear",
+        "raw_completion": "()\n    df.append(f.items())\n    df.append(f",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 41,
+        "name": "is_positive",
+        "category": "control_flow",
+        "prompt": "def is_positive(x):\n    if x > 0:\n        return True\n    return ",
+        "raw_completion": "\n    else: \n        return False \n``` \n    else: \n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 42,
+        "name": "are_equal",
+        "category": "control_flow",
+        "prompt": "def are_equal(a, b):\n    if a == b:\n        return True\n    return ",
+        "raw_completion": "\n    if n == 0: \n        return False \n    else: \n       ",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 43,
+        "name": "sum_to_n",
+        "category": "control_flow",
+        "prompt": "def sum_to_n(n):\n    total = 0\n    for i in range(n):\n        total += i\n    return ",
+        "raw_completion": "\n```\n```\n```\n```\n```\n```\n``",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 44,
+        "name": "max_of_three",
+        "category": "control_flow",
+        "prompt": "def max_of_three(a, b, c):\n    if a >= b and a >= c:\n        return a\n    elif b >= a and b >= c:\n        return b\n    return ",
+        "raw_completion": "\n```\n    else:\n        return a + blue\n```\n```",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 45,
+        "name": "count_down",
+        "category": "control_flow",
+        "prompt": "def count_down(n):\n    res = []\n    while n > 0:\n        res.append(n)\n        n -= 1\n    return ",
+        "raw_completion": "\n```python\ndef is_n(n): \n    if n == 0:",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 46,
+        "name": "get_squares",
+        "category": "control_flow",
+        "prompt": "def get_squares(n):\n    res = []\n    for i in range(n):\n        res.append(i * i)\n    return ",
+        "raw_completion": "\n```\nprint(Hello, 12))\n```\n```\n```\n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 47,
+        "name": "fact",
+        "category": "control_flow",
+        "prompt": "def fact(n):\n    if n <= 1:\n        return 1\n    return n * fact(",
+        "raw_completion": "n):\n    if n == 0:\n        return False\n    else:\n        return",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 48,
+        "name": "sign",
+        "category": "control_flow",
+        "prompt": "def sign(x):\n    if x > 0:\n        return 1\n    elif x < 0:\n        return -1\n    return ",
+        "raw_completion": "\n    else: \n        return False \n``` \n    else: \n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 49,
+        "name": "get_evens",
+        "category": "control_flow",
+        "prompt": "def get_evens(lst):\n    return [x for x in lst if x % 2 == ",
+        "raw_completion": "\n        x = 0] \n    return x + y + y + y + y +",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 50,
+        "name": "check_any",
+        "category": "control_flow",
+        "prompt": "def check_any(lst):\n    for val in lst:\n        if val:\n            return True\n    return ",
+        "raw_completion": "\n    else: \n        return False \n    else: \n        return False ",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 51,
+        "name": "lambda_square",
+        "category": "functional_prog",
+        "prompt": "square = lambda x: x * ",
+        "raw_completion": "\nx = y = y = y = y = y = y = y = Y = Y",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 52,
+        "name": "lambda_add",
+        "category": "functional_prog",
+        "prompt": "add = lambda a, b: a + ",
+        "raw_completion": "\ndef blue(a, b): \n    a = b, b, b,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 53,
+        "name": "double_list",
+        "category": "functional_prog",
+        "prompt": "def double_list(lst):\n    return list(map(lambda x: x * 2, ",
+        "raw_completion": "\n    return x: x: x: x: x: x: x: x: x",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 54,
+        "name": "filter_pos",
+        "category": "functional_prog",
+        "prompt": "def filter_pos(lst):\n    return list(filter(lambda x: x > 0, ",
+        "raw_completion": "\n    return x, y, y, y, y, y, y, y, y",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 55,
+        "name": "lambda_identity",
+        "category": "functional_prog",
+        "prompt": "identity = lambda x: ",
+        "raw_completion": "\n\n```\ndef sum_list:\n    sum = 0\n    sum = 0",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 56,
+        "name": "gen_sums",
+        "category": "functional_prog",
+        "prompt": "def gen_sums(n):\n    return sum(x for x in range(",
+        "raw_completion": "2):\n    print(x, y, y, y, y, y, y,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 57,
+        "name": "lambda_is_even",
+        "category": "functional_prog",
+        "prompt": "is_even = lambda x: x % 2 == ",
+        "raw_completion": "\n\n\ndef sum_list:\n    sum = 0\n    sum = 0\n   ",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 58,
+        "name": "compose",
+        "category": "functional_prog",
+        "prompt": "def compose(f, g):\n    return lambda x: f(g(",
+        "raw_completion": "x, y, y, y):\n    if x == 0:\n        return 0\n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 59,
+        "name": "sort_by_length",
+        "category": "functional_prog",
+        "prompt": "def sort_by_length(words):\n    return sorted(words, key=lambda s: len(",
+        "raw_completion": "s, s.items())\n```\ndef sweeled_scores(s",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 60,
+        "name": "lambda_concat",
+        "category": "functional_prog",
+        "prompt": "concat = lambda x, y: x + ",
+        "raw_completion": "\n\n\n```\ndef sum(x, y): \n    sum = 0\n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 61,
+        "name": "get_box_val",
+        "category": "basic_oop",
+        "prompt": "class Box:\n    def __init__(self, val):\n        self.val = val\n\ndef get_box_val(box):\n    return box.",
+        "raw_completion": "radius:\n    def __init__(self, num):\n        return self.radius:\n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 62,
+        "name": "call_name",
+        "category": "basic_oop",
+        "prompt": "class Person:\n    def __init__(self, name):\n        self.name = name\n    def get_name(self):\n        return self.name\n\ndef call_name(p):\n    return p.get_name",
+        "raw_completion": ".age\":\n    def get_age, name, name, name, name, name,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 63,
+        "name": "get_incremented",
+        "category": "basic_oop",
+        "prompt": "class Counter:\n    def __init__(self):\n        self.count = 0\n    def increment(self):\n        self.count += 1\n\ndef get_incremented():\n    c = Counter()\n    c.increment()\n    return c.",
+        "raw_completion": "items()\n```\ndef is_count(self):\n    print(f\"The",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 64,
+        "name": "get_point_coords",
+        "category": "basic_oop",
+        "prompt": "class Point:\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n\ndef get_point_coords(p):\n    return (p.x, p.",
+        "raw_completion": "y, y)\n```\n    def __init__(self, y):\n        return",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 65,
+        "name": "class_str",
+        "category": "basic_oop",
+        "prompt": "class User:\n    def __init__(self, name):\n        self.name = name\n    def __str__(self):\n        return self.",
+        "raw_completion": "age\":\n        self.age, age\n        self.age, age\n        self.",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 66,
+        "name": "class_equality",
+        "category": "basic_oop",
+        "prompt": "class Item:\n    def __init__(self, name):\n        self.name = name\n    def __eq__(self, other):\n        return self.name == other.",
+        "raw_completion": "age\n        self.age = age\n        self.age = age\n        self.age",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 67,
+        "name": "subclass_speak",
+        "category": "basic_oop",
+        "prompt": "class Animal:\n    def speak(self):\n        return 'sound'\nclass Dog(Animal):\n    def speak(self):\n        return 'woof'\n\ndef get_dog_sound():\n    return Dog().",
+        "raw_completion": "get(1)\n```\n```python\nclass Pers:\n    def __",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 68,
+        "name": "get_pi",
+        "category": "basic_oop",
+        "prompt": "class Circle:\n    pi = 3.14\n    def __init__(self, r):\n        self.r = r\n\ndef get_pi():\n    return Circle.",
+        "raw_completion": "price\n```\n    def __init__(self, name, name, name):\n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 69,
+        "name": "get_dict_val",
+        "category": "basic_oop",
+        "prompt": "class DictClass:\n    def __init__(self):\n        self.data = {}\n    def add(self, k, v):\n        self.data[k] = v\n\ndef get_dict_val():\n    d = DictClass()\n    d.add('a', 1)\n    return d.data[",
+        "raw_completion": "0]\n```\n    def __name__(self, data):\n        self.items",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 70,
+        "name": "class_add",
+        "category": "basic_oop",
+        "prompt": "class Calculator:\n    def add(self, x, y):\n        return x + ",
+        "raw_completion": "\n        x = y = y = y = y = y = y = y = y =",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 71,
+        "name": "is_palindrome",
+        "category": "simple_algorithms",
+        "prompt": "def is_palindrome(s):\n    return s == s[",
+        "raw_completion": "c]\n    s = s.sub(s, s, s, s, s,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 72,
+        "name": "fib",
+        "category": "simple_algorithms",
+        "prompt": "def fib(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    return fib(n-1) + fib(",
+        "raw_completion": "n-2)\n```python\ndef fib_ib_ib_ib_ib",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 73,
+        "name": "gcd",
+        "category": "simple_algorithms",
+        "prompt": "def gcd(a, b):\n    while b:\n        a, b = b, a % ",
+        "raw_completion": "\n        b = b, b, b, b, b, b, b, b,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 74,
+        "name": "find_index",
+        "category": "simple_algorithms",
+        "prompt": "def find_index(lst, x):\n    for i in range(len(lst)):\n        if lst[i] == x:\n            return i\n    return -",
+        "raw_completion": "1\n```\n```\ndef is_index(lst):\n    if len(",
+        "clean_completion": "1",
+        "passed": true
+      },
+      {
+        "id": 75,
+        "name": "c_to_f",
+        "category": "simple_algorithms",
+        "prompt": "def c_to_f(c):\n    return c * 9 / 5 + ",
+        "raw_completion": "\n    return a given list of the number of the number of the number of the number of numbers",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 76,
+        "name": "count_vowels",
+        "category": "simple_algorithms",
+        "prompt": "def count_vowels(s):\n    return sum(1 for c in s if c in ",
+        "raw_completion": "\n    s = s.replace(s1, s2, s2, s2,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 77,
+        "name": "get_min",
+        "category": "simple_algorithms",
+        "prompt": "def get_min(lst):\n    if not lst:\n        return None\n    min_val = lst[0]\n    for x in lst:\n        if x < min_val:\n            min_val = x\n    return ",
+        "raw_completion": "\n```\n    else: \n        return False \n``` \n```",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 78,
+        "name": "fizzbuzz",
+        "category": "simple_algorithms",
+        "prompt": "def fizzbuzz(n):\n    if n % 15 == 0:\n        return 'FizzBuzz'\n    elif n % 3 == 0:\n        return 'Fizz'\n    elif n % 5 == 0:\n        return 'Buzz'\n    return str(",
+        "raw_completion": "n'\n    else:\n        return 'John'\n```\n    else:",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 79,
+        "name": "fact_iter",
+        "category": "simple_algorithms",
+        "prompt": "def fact_iter(n):\n    res = 1\n    for i in range(1, n + 1):\n        res *= i\n    return ",
+        "raw_completion": "\n```\n```\ndef is_prime(n): \n    if n ==",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 80,
+        "name": "is_prime",
+        "category": "simple_algorithms",
+        "prompt": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return ",
+        "raw_completion": "\n```\n```python\ndef is_prime(n): \n    if n",
+        "clean_completion": "",
+        "passed": false
+      }
+    ]
+  },
+  "SamatNext-120M": {
+    "model_name": "SamatNext-120M",
+    "overall": {
+      "passed": 10,
+      "total": 80,
+      "pass_rate": 12.5
+    },
+    "categories": {
+      "basic_math_logic": {
+        "passed": 0,
+        "total": 10,
+        "pass_rate": 0.0
+      },
+      "string_manipulation": {
+        "passed": 4,
+        "total": 10,
+        "pass_rate": 40.0
+      },
+      "list_tuple_ops": {
+        "passed": 1,
+        "total": 10,
+        "pass_rate": 10.0
+      },
+      "dict_set_ops": {
+        "passed": 1,
+        "total": 10,
+        "pass_rate": 10.0
+      },
+      "control_flow": {
+        "passed": 0,
+        "total": 10,
+        "pass_rate": 0.0
+      },
+      "functional_prog": {
+        "passed": 0,
+        "total": 10,
+        "pass_rate": 0.0
+      },
+      "basic_oop": {
+        "passed": 3,
+        "total": 10,
+        "pass_rate": 30.0
+      },
+      "simple_algorithms": {
+        "passed": 1,
+        "total": 10,
+        "pass_rate": 10.0
+      }
+    },
+    "details": [
+      {
+        "id": 1,
+        "name": "add",
+        "category": "basic_math_logic",
+        "prompt": "def add(a, b):\n    return a + ",
+        "raw_completion": "\n\nprint(fibonacci(a, b, b)) \n\n# Output:\n``",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 2,
+        "name": "subtract",
+        "category": "basic_math_logic",
+        "prompt": "def subtract(a, b):\n    return a - ",
+        "raw_completion": "\n\nprint(fibonacci(a, b, b))\n```\n\nThe ball",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 3,
+        "name": "multiply",
+        "category": "basic_math_logic",
+        "prompt": "def multiply(a, b):\n    return a * ",
+        "raw_completion": "\n\nprint(fibonacci(a, b, b))\n```\n\nThe algorithm should",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 4,
+        "name": "divide",
+        "category": "basic_math_logic",
+        "prompt": "def divide(a, b):\n    return a / ",
+        "raw_completion": "\n\nprint(fibonacci(a, b, b))\n```\n\nThe ball",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 5,
+        "name": "is_even",
+        "category": "basic_math_logic",
+        "prompt": "def is_even(n):\n    return n % 2 == ",
+        "raw_completion": "\n\nprint(fibonacci_of(n, n))\n```\n\nThe algorithm should",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 6,
+        "name": "is_odd",
+        "category": "basic_math_logic",
+        "prompt": "def is_odd(n):\n    return n % 2 != ",
+        "raw_completion": "\n\nprint(fibonacci_of_three(n, n))\n```\n\nThe",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 7,
+        "name": "square",
+        "category": "basic_math_logic",
+        "prompt": "def square(x):\n    return x ** ",
+        "raw_completion": "\n\nprint(f)\n```\n\nThe code is a list of numbers of the",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 8,
+        "name": "cube",
+        "category": "basic_math_logic",
+        "prompt": "def cube(x):\n    return x ** ",
+        "raw_completion": "\n\nprint(f'The number of the number of the number of the sum of the number",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 9,
+        "name": "absolute_value",
+        "category": "basic_math_logic",
+        "prompt": "def absolute_value(x):\n    if x < 0:\n        return -x\n    return ",
+        "raw_completion": "\n\nprint(f)\n```\n```\n\nThe sum of the sum of",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 10,
+        "name": "negate",
+        "category": "basic_math_logic",
+        "prompt": "def negate(x):\n    return -",
+        "raw_completion": "1\n\nprint(f)\n```\n\nThe code is a list of the sum",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 11,
+        "name": "concat",
+        "category": "string_manipulation",
+        "prompt": "def concat(s1, s2):\n    return s1 + ",
+        "raw_completion": "\n\nprint(reverse_list(s2))\n```\n```\n\nThe",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 12,
+        "name": "get_len",
+        "category": "string_manipulation",
+        "prompt": "def get_len(s):\n    return len(",
+        "raw_completion": "s.split())\n\nprint(find_prime_list)\n```\n\nThe",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 13,
+        "name": "to_upper",
+        "category": "string_manipulation",
+        "prompt": "def to_upper(s):\n    return s.upper",
+        "raw_completion": "()\n\nprint(find_prime_letters)\n```\n\nThe algorithm should generate",
+        "clean_completion": "()",
+        "passed": true
+      },
+      {
+        "id": 14,
+        "name": "to_lower",
+        "category": "string_manipulation",
+        "prompt": "def to_lower(s):\n    return s.lower",
+        "raw_completion": "()\n\nprint(find_prime_numbers(s.items())\n```\n\n",
+        "clean_completion": "()",
+        "passed": true
+      },
+      {
+        "id": 15,
+        "name": "first_char",
+        "category": "string_manipulation",
+        "prompt": "def first_char(s):\n    return s[",
+        "raw_completion": "0]\n\nprint(find_fibonacci(s))\n```\n\nThe algorithm should",
+        "clean_completion": "0]",
+        "passed": true
+      },
+      {
+        "id": 16,
+        "name": "last_char",
+        "category": "string_manipulation",
+        "prompt": "def last_char(s):\n    return s[",
+        "raw_completion": "0]\n\nprint(find_fibonacci(s))\n```\n\nThe algorithm should",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 17,
+        "name": "repeat_str",
+        "category": "string_manipulation",
+        "prompt": "def repeat_str(s, n):\n    return s * ",
+        "raw_completion": "\n\nprint(reverse_str(s))\n```\n\nThe algorithm should print the",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 18,
+        "name": "clean_str",
+        "category": "string_manipulation",
+        "prompt": "def clean_str(s):\n    return s.strip",
+        "raw_completion": "()\n\nprint(reverse_str)\n```\n\nThe algorithm should print the number",
+        "clean_completion": "()",
+        "passed": true
+      },
+      {
+        "id": 19,
+        "name": "is_empty",
+        "category": "string_manipulation",
+        "prompt": "def is_empty(s):\n    return len(s) == ",
+        "raw_completion": "\n\nprint(find_prime(s)) \n\n# Output:\n```\n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 20,
+        "name": "contains_char",
+        "category": "string_manipulation",
+        "prompt": "def contains_char(s, c):\n    return c in ",
+        "raw_completion": "\n\nprint(reverse_str)\n```\n\nThe algorithm should print the number of",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 21,
+        "name": "list_len",
+        "category": "list_tuple_ops",
+        "prompt": "def list_len(lst):\n    return len(",
+        "raw_completion": "arr) Fixing the reins! I'm all over it! ```python\ndef sum",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 22,
+        "name": "first_element",
+        "category": "list_tuple_ops",
+        "prompt": "def first_element(lst):\n    return lst[",
+        "raw_completion": "0]\n\nprint(random.randint(1, 2))\n```\n\nThe",
+        "clean_completion": "0]",
+        "passed": true
+      },
+      {
+        "id": 23,
+        "name": "last_element",
+        "category": "list_tuple_ops",
+        "prompt": "def last_element(lst):\n    return lst[",
+        "raw_completion": "0]\n\nprint(random.randint(1, 2))\n```\n\nThe",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 24,
+        "name": "sum_list",
+        "category": "list_tuple_ops",
+        "prompt": "def sum_list(lst):\n    return sum(",
+        "raw_completion": "n, n) Fixing the reins! I'm all set! ```python\ndef sum",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 25,
+        "name": "add_element",
+        "category": "list_tuple_ops",
+        "prompt": "def add_element(lst, x):\n    lst.append(",
+        "raw_completion": "n)\n    return sum(n, n) Fixing the code by adding the sum of",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 26,
+        "name": "reverse_list",
+        "category": "list_tuple_ops",
+        "prompt": "def reverse_list(lst):\n    return lst[",
+        "raw_completion": "0]\n\nprint(find_list)\n```\n\nThe sum of the list",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 27,
+        "name": "contains",
+        "category": "list_tuple_ops",
+        "prompt": "def contains(lst, x):\n    return x in ",
+        "raw_completion": "\n\nprint(f, n, end, end, end, end, end, end,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 28,
+        "name": "get_empty",
+        "category": "list_tuple_ops",
+        "prompt": "def get_empty():\n    return ",
+        "raw_completion": "\n\nprint(random.randint(1, 10)) \n\n# Output:\n``",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 29,
+        "name": "make_pair",
+        "category": "list_tuple_ops",
+        "prompt": "def make_pair(a, b):\n    return ",
+        "raw_completion": "\n\nprint(fibonacci_of(a, b, b, b, b, b,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 30,
+        "name": "count_occ",
+        "category": "list_tuple_ops",
+        "prompt": "def count_occ(lst, x):\n    return lst.count(",
+        "raw_completion": "n, n) Fixing the code for the sum of the sum of the sum of the sum",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 31,
+        "name": "get_val",
+        "category": "dict_set_ops",
+        "prompt": "def get_val(d, k):\n    return d[",
+        "raw_completion": "i]\n\nprint(random.randint(1, 2, 3))\n```\n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 32,
+        "name": "get_keys",
+        "category": "dict_set_ops",
+        "prompt": "def get_keys(d):\n    return d.keys",
+        "raw_completion": "()\n\nprint(reverse_list)\n```\n\nThe algorithm should print the list",
+        "clean_completion": "()",
+        "passed": true
+      },
+      {
+        "id": 33,
+        "name": "get_values",
+        "category": "dict_set_ops",
+        "prompt": "def get_values(d):\n    return d.values",
+        "raw_completion": "(n, n) Fixing the code for the sum of the sum of the sum of the",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 34,
+        "name": "has_key",
+        "category": "dict_set_ops",
+        "prompt": "def has_key(d, k):\n    return k in ",
+        "raw_completion": "\n\nprint(reverse_of_letters)\n```\n\nThe algorithm should print the",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 35,
+        "name": "dict_size",
+        "category": "dict_set_ops",
+        "prompt": "def dict_size(d):\n    return len(",
+        "raw_completion": "n) Fixing the reins! I'm all over it! ```python\ndef is_",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 36,
+        "name": "add_to_set",
+        "category": "dict_set_ops",
+        "prompt": "def add_to_set(s, x):\n    s.add(",
+        "raw_completion": "0, n) Fixing the code by adding a list of numbers of the number of the number",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 37,
+        "name": "in_set",
+        "category": "dict_set_ops",
+        "prompt": "def in_set(s, x):\n    return x in ",
+        "raw_completion": "\n\nprint(reverse_list)\n```\n```\n\nThe algorithm should print",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 38,
+        "name": "set_intersect",
+        "category": "dict_set_ops",
+        "prompt": "def set_intersect(s1, s2):\n    return s1 & ",
+        "raw_completion": "\n\nif __name__ == '__main__':\n    print(f1)\n```",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 39,
+        "name": "set_union",
+        "category": "dict_set_ops",
+        "prompt": "def set_union(s1, s2):\n    return s1 | ",
+        "raw_completion": "\n\nprint(reverse_list)\n```\n\nThe algorithm should print the list of",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 40,
+        "name": "clear_dict",
+        "category": "dict_set_ops",
+        "prompt": "def clear_dict(d):\n    d.clear",
+        "raw_completion": "()\n    return s.split()\n\n# 1. Added a list of the list of",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 41,
+        "name": "is_positive",
+        "category": "control_flow",
+        "prompt": "def is_positive(x):\n    if x > 0:\n        return True\n    return ",
+        "raw_completion": "\n    if i == 0: \n        return a + b, b, b, b",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 42,
+        "name": "are_equal",
+        "category": "control_flow",
+        "prompt": "def are_equal(a, b):\n    if a == b:\n        return True\n    return ",
+        "raw_completion": "\n    if n == 0: \n        return True\n    if n == 1: ",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 43,
+        "name": "sum_to_n",
+        "category": "control_flow",
+        "prompt": "def sum_to_n(n):\n    total = 0\n    for i in range(n):\n        total += i\n    return ",
+        "raw_completion": "\n\nprint(fibonacci_(n, n))\n```\n```\n\nThe",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 44,
+        "name": "max_of_three",
+        "category": "control_flow",
+        "prompt": "def max_of_three(a, b, c):\n    if a >= b and a >= c:\n        return a\n    elif b >= a and b >= c:\n        return b\n    return ",
+        "raw_completion": "\n\nprint(fibonacci_three(n, n)) \n```The `random`",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 45,
+        "name": "count_down",
+        "category": "control_flow",
+        "prompt": "def count_down(n):\n    res = []\n    while n > 0:\n        res.append(n)\n        n -= 1\n    return ",
+        "raw_completion": "\n\nprint(fibonacci_of_three(n, \" + \" + \" + \" +",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 46,
+        "name": "get_squares",
+        "category": "control_flow",
+        "prompt": "def get_squares(n):\n    res = []\n    for i in range(n):\n        res.append(i * i)\n    return ",
+        "raw_completion": "\n\nprint(fibonacci_of)\n```\n```\n\nThe code to find",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 47,
+        "name": "fact",
+        "category": "control_flow",
+        "prompt": "def fact(n):\n    if n <= 1:\n        return 1\n    return n * fact(",
+        "raw_completion": "n, n)\n```\n    return a, b, b, b, b,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 48,
+        "name": "sign",
+        "category": "control_flow",
+        "prompt": "def sign(x):\n    if x > 0:\n        return 1\n    elif x < 0:\n        return -1\n    return ",
+        "raw_completion": "\n\nprint(f, n, 'a', 'b', 'b', 'b',",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 49,
+        "name": "get_evens",
+        "category": "control_flow",
+        "prompt": "def get_evens(lst):\n    return [x for x in lst if x % 2 == ",
+        "raw_completion": "\n\nprint(result)\n```\n```\n\nThe algorithm should print the sum",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 50,
+        "name": "check_any",
+        "category": "control_flow",
+        "prompt": "def check_any(lst):\n    for val in lst:\n        if val:\n            return True\n    return ",
+        "raw_completion": "\n\nprint(random.randint(1, 2)) \n```\n\nThe `",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 51,
+        "name": "lambda_square",
+        "category": "functional_prog",
+        "prompt": "square = lambda x: x * ",
+        "raw_completion": "\ny = 0\nprint(f'The sum of the sum of the sum of the sum",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 52,
+        "name": "lambda_add",
+        "category": "functional_prog",
+        "prompt": "add = lambda a, b: a + ",
+        "raw_completion": "\nprint(f, 'a', 'b', 'b', 'b', 'b',",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 53,
+        "name": "double_list",
+        "category": "functional_prog",
+        "prompt": "def double_list(lst):\n    return list(map(lambda x: x * 2, ",
+        "raw_completion": "\n```\nprint(result)\n```\n\nThe sum of the list of numbers",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 54,
+        "name": "filter_pos",
+        "category": "functional_prog",
+        "prompt": "def filter_pos(lst):\n    return list(filter(lambda x: x > 0, ",
+        "raw_completion": "\n```\nprint(result)\n```\n\nThe sum of the sum of the",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 55,
+        "name": "lambda_identity",
+        "category": "functional_prog",
+        "prompt": "identity = lambda x: ",
+        "raw_completion": "\n\nprint(f'The sum of the number of the sum of the sum of the number",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 56,
+        "name": "gen_sums",
+        "category": "functional_prog",
+        "prompt": "def gen_sums(n):\n    return sum(x for x in range(",
+        "raw_completion": "2, n): \n    if n == 0: \n        return a + bib",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 57,
+        "name": "lambda_is_even",
+        "category": "functional_prog",
+        "prompt": "is_even = lambda x: x % 2 == ",
+        "raw_completion": "\nprint(f'The sum of the sum of the sum of the sum of the sum of",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 58,
+        "name": "compose",
+        "category": "functional_prog",
+        "prompt": "def compose(f, g):\n    return lambda x: f(g(",
+        "raw_completion": "n, n, n, b, n, b, n, b, b, b,",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 59,
+        "name": "sort_by_length",
+        "category": "functional_prog",
+        "prompt": "def sort_by_length(words):\n    return sorted(words, key=lambda s: len(",
+        "raw_completion": "word, 'a', 'b', 'b', 'b', 'b', 'b',",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 60,
+        "name": "lambda_concat",
+        "category": "functional_prog",
+        "prompt": "concat = lambda x, y: x + ",
+        "raw_completion": "\nprint(x, b, b, n, end = \"a\", \"banana",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 61,
+        "name": "get_box_val",
+        "category": "basic_oop",
+        "prompt": "class Box:\n    def __init__(self, val):\n        self.val = val\n\ndef get_box_val(box):\n    return box.",
+        "raw_completion": "b\n\n# 1. Added a list of the sum of the number of the number of the",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 62,
+        "name": "call_name",
+        "category": "basic_oop",
+        "prompt": "class Person:\n    def __init__(self, name):\n        self.name = name\n    def get_name(self):\n        return self.name\n\ndef call_name(p):\n    return p.get_name",
+        "raw_completion": "\n\n# 1. Added a list of the given number\n# 2. Added a list of",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 63,
+        "name": "get_incremented",
+        "category": "basic_oop",
+        "prompt": "class Counter:\n    def __init__(self):\n        self.count = 0\n    def increment(self):\n        self.count += 1\n\ndef get_incremented():\n    c = Counter()\n    c.increment()\n    return c.",
+        "raw_completion": "count\n```\n\n# 1. Added a list of the sum of the number of the",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 64,
+        "name": "get_point_coords",
+        "category": "basic_oop",
+        "prompt": "class Point:\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n\ndef get_point_coords(p):\n    return (p.x, p.",
+        "raw_completion": "y) Fixing the code by adding the sum of the sum of the sum of the number of",
+        "clean_completion": "y)",
+        "passed": true
+      },
+      {
+        "id": 65,
+        "name": "class_str",
+        "category": "basic_oop",
+        "prompt": "class User:\n    def __init__(self, name):\n        self.name = name\n    def __str__(self):\n        return self.",
+        "raw_completion": "name\n```\n    def get_name(self):\n        return self.name\n",
+        "clean_completion": "name",
+        "passed": true
+      },
+      {
+        "id": 66,
+        "name": "class_equality",
+        "category": "basic_oop",
+        "prompt": "class Item:\n    def __init__(self, name):\n        self.name = name\n    def __eq__(self, other):\n        return self.name == other.",
+        "raw_completion": "name\n```\n    def __init__(self, name):\n        self.name =",
+        "clean_completion": "name",
+        "passed": true
+      },
+      {
+        "id": 67,
+        "name": "subclass_speak",
+        "category": "basic_oop",
+        "prompt": "class Animal:\n    def speak(self):\n        return 'sound'\nclass Dog(Animal):\n    def speak(self):\n        return 'woof'\n\ndef get_dog_sound():\n    return Dog().",
+        "raw_completion": "get_common(0, 'b', 'b', 'b', 'b', 'b",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 68,
+        "name": "get_pi",
+        "category": "basic_oop",
+        "prompt": "class Circle:\n    pi = 3.14\n    def __init__(self, r):\n        self.r = r\n\ndef get_pi():\n    return Circle.",
+        "raw_completion": "get_common(0, 2, 3)\n```\n\n# 1. Added a",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 69,
+        "name": "get_dict_val",
+        "category": "basic_oop",
+        "prompt": "class DictClass:\n    def __init__(self):\n        self.data = {}\n    def add(self, k, v):\n        self.data[k] = v\n\ndef get_dict_val():\n    d = DictClass()\n    d.add('a', 1)\n    return d.data[",
+        "raw_completion": "0]\n```\n\n# 1. Added a list of the sum\n# 2.",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 70,
+        "name": "class_add",
+        "category": "basic_oop",
+        "prompt": "class Calculator:\n    def add(self, x, y):\n        return x + ",
+        "raw_completion": "\n    \n    def get_prime(self, n): \n        return self.num",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 71,
+        "name": "is_palindrome",
+        "category": "simple_algorithms",
+        "prompt": "def is_palindrome(s):\n    return s == s[",
+        "raw_completion": "0]\n\nprint(find_prime(s))\n```\n\nThe algorithm should",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 72,
+        "name": "fib",
+        "category": "simple_algorithms",
+        "prompt": "def fib(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    return fib(n-1) + fib(",
+        "raw_completion": "n-1)\n    if n == 0:\n        return 1\n    else:\n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 73,
+        "name": "gcd",
+        "category": "simple_algorithms",
+        "prompt": "def gcd(a, b):\n    while b:\n        a, b = b, a % ",
+        "raw_completion": "\n        a = b\n        b = b\n        b = b\n        b = b",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 74,
+        "name": "find_index",
+        "category": "simple_algorithms",
+        "prompt": "def find_index(lst, x):\n    for i in range(len(lst)):\n        if lst[i] == x:\n            return i\n    return -",
+        "raw_completion": "1\n\nprint(reverse_prime(n, n))\n```\n```\n",
+        "clean_completion": "1",
+        "passed": true
+      },
+      {
+        "id": 75,
+        "name": "c_to_f",
+        "category": "simple_algorithms",
+        "prompt": "def c_to_f(c):\n    return c * 9 / 5 + ",
+        "raw_completion": "\n\nprint(f'The number of the sum of the sum of the sum of the number",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 76,
+        "name": "count_vowels",
+        "category": "simple_algorithms",
+        "prompt": "def count_vowels(s):\n    return sum(1 for c in s if c in ",
+        "raw_completion": "\n\nprint(reverse_str(s))\n```\nThe code to find the sum",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 77,
+        "name": "get_min",
+        "category": "simple_algorithms",
+        "prompt": "def get_min(lst):\n    if not lst:\n        return None\n    min_val = lst[0]\n    for x in lst:\n        if x < min_val:\n            min_val = x\n    return ",
+        "raw_completion": "\n\nprint(fibonacci_d)\n```\n```\n\nThe `random`",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 78,
+        "name": "fizzbuzz",
+        "category": "simple_algorithms",
+        "prompt": "def fizzbuzz(n):\n    if n % 15 == 0:\n        return 'FizzBuzz'\n    elif n % 3 == 0:\n        return 'Fizz'\n    elif n % 5 == 0:\n        return 'Buzz'\n    return str(",
+        "raw_completion": "n, 'a', 'b', 'b', 'b', 'b', 'b',",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 79,
+        "name": "fact_iter",
+        "category": "simple_algorithms",
+        "prompt": "def fact_iter(n):\n    res = 1\n    for i in range(1, n + 1):\n        res *= i\n    return ",
+        "raw_completion": "\n\nprint(fibonacci_fibonacci(n, n))\n```\n```\n\n",
+        "clean_completion": "",
+        "passed": false
+      },
+      {
+        "id": 80,
+        "name": "is_prime",
+        "category": "simple_algorithms",
+        "prompt": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return ",
+        "raw_completion": "\n\nprint(fibonacci_of(n, \" + \" + \" + \" + \" +",
+        "clean_completion": "",
+        "passed": false
+      }
+    ]
+  }
+}
