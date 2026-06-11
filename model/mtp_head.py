@@ -53,6 +53,8 @@ class MTPHead(nn.Module):
         loss_mask: mx.array,
     ) -> mx.array:
         losses = []
+        gating_enabled = getattr(self.config, "mtp_confidence_gate", True)
+        beta = getattr(self.config, "mtp_calibration_weight", 0.1)
 
         for i in range(self.mtp_heads):
             if i == 0:
@@ -68,8 +70,16 @@ class MTPHead(nn.Module):
 
             ce_i = nn.losses.cross_entropy(logits_i, target_i, reduction="none")
             mask_i = mask_i.astype(ce_i.dtype)
-            weights = conf_i.squeeze(-1) * mask_i
-            loss_i = (ce_i * weights).sum() / mx.maximum(mask_i.sum(), 1.0)
+
+            if gating_enabled:
+                conf_i = conf_i.squeeze(-1)
+                weights_i = conf_i * mask_i
+                task_loss_i = (ce_i * weights_i).sum() / mx.maximum(weights_i.sum(), 1e-8)
+                cal_penalty_i = -beta * (mx.log(mx.maximum(conf_i, 1e-8)) * mask_i).sum() / mx.maximum(mask_i.sum(), 1.0)
+                loss_i = task_loss_i + cal_penalty_i
+            else:
+                loss_i = (ce_i * mask_i).sum() / mx.maximum(mask_i.sum(), 1.0)
+
             losses.append(loss_i)
 
         return mx.stack(losses).mean()

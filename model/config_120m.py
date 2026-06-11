@@ -64,6 +64,7 @@ class SamatNext120MConfig(Experiment120MConfig):
     n_latent_tokens: int = 4
     mtp_heads: int = 2
     mtp_confidence_gate: bool = True
+    mtp_calibration_weight: float = 0.1
     layer_pattern: str = "gated_attention,diff"
 
     def __post_init__(self) -> None:

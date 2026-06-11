@@ -10,6 +10,7 @@ from data.dataset import BatchOutput
 from model.config import DEFAULT_CONFIG, SamatNextConfig
 from model.memory_bus import MemoryBus
 from model.model import SamatNext, count_params_exact
+from model.mtp_head import MTPHead
 from train.trainer import Trainer
 
 
@@ -101,6 +102,51 @@ class ModelInvariantTest(unittest.TestCase):
 
         self.assertEqual(metrics["microbatches"], 2)
         self.assertEqual(trainer.optimizer.step.item(), 1)
+
+    def test_mtp_loss_prevent_confidence_collapse(self):
+        config = tiny_config()
+        head = MTPHead(config)
+
+        targets = mx.zeros((1, 8), dtype=mx.int32)
+        logits = mx.zeros((1, 8, config.mtp_heads, config.vocab_size))
+        loss_mask = mx.ones((1, 8), dtype=mx.bfloat16)
+
+        # 1. Zero confidence case (must not collapse loss to 0)
+        conf_zeros = mx.zeros((1, 8, config.mtp_heads, 1))
+        loss_zeros = head.compute_mtp_loss(logits, conf_zeros, targets, loss_mask)
+        mx.eval(loss_zeros)
+        self.assertGreater(loss_zeros.item(), 1.5)
+
+        # 2. Perfect confidence and correct predictions case (minimized loss)
+        logits_correct = mx.zeros((1, 8, config.mtp_heads, config.vocab_size))
+        logits_correct[:, :, :, 0] = 1000.0
+        conf_ones = mx.ones((1, 8, config.mtp_heads, 1))
+        loss_correct = head.compute_mtp_loss(logits_correct, conf_ones, targets, loss_mask)
+        mx.eval(loss_correct)
+        self.assertLess(loss_correct.item(), 0.05)
+
+        # 3. Verify gradients with respect to confidence
+        def loss_fn(conf_val):
+            fixed_conf = mx.full((1, 7, config.mtp_heads, 1), 0.5)
+            val_tensor = mx.broadcast_to(conf_val[None, None, None], (1, 1, config.mtp_heads, 1))
+            conf = mx.concatenate([val_tensor, fixed_conf], axis=1)
+
+            bad_logits = mx.zeros((1, 8, config.mtp_heads, config.vocab_size))
+            bad_logits[:, :1, :, 1] = 10.0
+            bad_logits[:, 1:, :, 0] = 1000.0
+            return head.compute_mtp_loss(bad_logits, conf, targets, loss_mask)
+
+        grad_fn = mx.grad(loss_fn)
+
+        # For very low confidence, calibration penalty forces confidence up
+        grad_low = grad_fn(mx.array(1e-6))
+        mx.eval(grad_low)
+        self.assertLess(grad_low.item(), 0.0)
+
+        # For high confidence on bad prediction, task loss forces confidence down
+        grad_high = grad_fn(mx.array(0.9))
+        mx.eval(grad_high)
+        self.assertGreater(grad_high.item(), 0.0)
 
 
 if __name__ == "__main__":

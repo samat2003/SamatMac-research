@@ -27,6 +27,7 @@ class SamatNextConfig:
     fim_rate: float = 0.5
     mtp_heads: int = 6
     mtp_confidence_gate: bool = True
+    mtp_calibration_weight: float = 0.1
     tie_embeddings: bool = False
     warmup_steps: int = 500
     layer_pattern: str = "gated_attention,diff"
