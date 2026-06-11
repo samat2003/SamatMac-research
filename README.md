@@ -73,7 +73,7 @@ SamatNext: " + b"                                 ✅
 ├── model/
 │   ├── config_120m.py          # Model configurations
 │   ├── baseline_model.py       # Standard Transformer
-│   ├── samatnext_20m.py        # SamatNext architecture
+│   ├── samatnext_20m.py        # SamatNext architecture (named 20m for legacy, runs at 117M)
 │   ├── delta_layer.py          # Gated Causal Attention
 │   ├── diff_attn_layer.py      # Differential Attention
 │   ├── mtp_head.py             # Multi-Token Prediction
