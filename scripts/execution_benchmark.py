@@ -1,8 +1,29 @@
 """Research-grade Execution-based Code Completion Benchmark (pass@1) for 120M models.
 
-Evaluates Baseline-120M and SamatNext-120M on 80 code completion tasks
-divided into 8 distinct categories. Verifies completions by finding the longest
-prefix of generated text that successfully compiles and passes assertions.
+Evaluates Baseline-120M and SamatNext-120M on 80 code completion tasks divided
+into 8 distinct categories. Verifies completions by finding the longest prefix
+of generated text that successfully compiles and passes assertion tests.
+
+Evaluation Protocol & Mathematical Formulation:
+1. Pass@k Metric:
+   We follow the standard formulation of the pass@k metric (Chen et al., 2021):
+       pass@k = E[ 1 - ( (n - c) choose k ) / ( n choose k ) ]
+   where:
+       n = total number of generated samples per problem
+       c = number of correct samples per problem that pass all assertions
+   Since we utilize greedy decoding (temperature T = 0), we generate a single
+   deterministic sample (n = 1) per problem. For k = 1, the formula simplifies to:
+       pass@1 = c / n = (1 if passes else 0)
+   The final score is reported as the average pass@1 rate across all problems:
+       Pass@1 Rate = (number of passing tasks) / (total number of tasks)
+
+2. Prefix-Compilation Search:
+   Given that small scale models (120M parameters) trained on instruction datasets
+   often generate the correct code continuation but subsequently emit formatting
+   artifacts, conversational boilerplate, or comments, we search for the longest
+   prefix of the generated completion that makes the combined code syntactically
+   valid and functionally correct (passing all assertions). This is an unbiased
+   verification protocol applied identically to both architectures.
 """
 
 import sys
