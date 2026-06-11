@@ -1,0 +1,37 @@
+# Virtual environment
+samatnext-env/
+
+# Caches
+.pip-cache/
+.uv-cache/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Model checkpoints (too large for git)
+results/
+checkpoints/
+
+# Large data files
+data/python_codes_25k.jsonl
+data/tokenizer.json
+synthetic_data.jsonl
+
+# Debug/scratch scripts
+check_hf.py
+search_hf.py
+download_dataset.py
+param_count_debug.py
+param_count_debug_baseline.py
+param_test.py
+param_test_4.py
+profile_samatnext.py
+test_mlx.py
+test_sdpa.py
+test_sdpa_3d.py
+time_estimate.py
+
+# IDE
+.vscode/
+.idea/
+SlidingSpeed/
