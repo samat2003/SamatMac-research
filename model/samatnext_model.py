@@ -1,9 +1,9 @@
-"""SamatNext architecture scaled down to 20M parameters."""
+"""SamatNext scalable hybrid architecture."""
 
 import mlx.core as mx
 import mlx.nn as nn
 
-from model.config_20m import SamatNext20MConfig
+from model.config_120m import SamatNext120MConfig
 from model.delta_layer import GatedCausalAttentionLayer
 from model.diff_attn_layer import DiffAttnLayer
 from model.latent_tokens import LatentTokens
@@ -13,9 +13,9 @@ from model.mtp_head import MTPHead
 from mlx.utils import tree_flatten
 
 
-class MTPHead20M(MTPHead):
+class MTPHeadTied(MTPHead):
     """MTP Head that respects the tie_embeddings flag."""
-    def __init__(self, config: SamatNext20MConfig, embed_weight=None):
+    def __init__(self, config: SamatNext120MConfig, embed_weight=None):
         super().__init__(config)
         self.tie_embeddings = config.tie_embeddings
         self._embed_weight = embed_weight
@@ -44,8 +44,8 @@ class MTPHead20M(MTPHead):
         return logits, confidences
 
 
-class SamatNext20M(nn.Module):
-    def __init__(self, config: SamatNext20MConfig):
+class SamatNextModel(nn.Module):
+    def __init__(self, config: SamatNext120MConfig):
         super().__init__()
         self.config = config
         self.embed = nn.Embedding(config.vocab_size, config.d_model)
@@ -68,7 +68,7 @@ class SamatNext20M(nn.Module):
         else:
             self.lm_head = nn.Linear(config.d_model, config.vocab_size, bias=False)
             
-        self.mtp_head = MTPHead20M(config, self.embed.weight if config.tie_embeddings else None)
+        self.mtp_head = MTPHeadTied(config, self.embed.weight if config.tie_embeddings else None)
 
     def __call__(
         self,
