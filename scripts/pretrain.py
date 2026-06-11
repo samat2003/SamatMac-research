@@ -16,8 +16,8 @@ from datasets import load_dataset
 from data.tokenizer import SamatNextTokenizer
 from data.dataset import PythonCodeDataset, BatchOutput
 from model.config_120m import Baseline120MConfig, SamatNext120MConfig
-from model.baseline_model import Baseline20M as BaselineModel
-from model.samatnext_20m import SamatNext20M as SamatNextModel
+from model.baseline_model import BaselineModel
+from model.samatnext_model import SamatNextModel
 from train.experiment_trainer import ExperimentTrainer, BATCH_SIZE, GRAD_ACCUM_STEPS
 
 def run_pretrain(model_name: str, seed: int = 42):

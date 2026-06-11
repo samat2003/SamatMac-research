@@ -1,4 +1,4 @@
-"""Main entry point for the 20M Validation Experiment."""
+"""Main entry point for the 120M Validation Experiment."""
 
 import argparse
 import sys
@@ -12,15 +12,15 @@ import mlx.core as mx
 
 from data.dataset import HUGGINGFACE_DATASETS, PythonCodeDataset
 from data.tokenizer import SamatNextTokenizer
-from model.config_20m import Baseline20MConfig, SamatNext20MConfig
-from model.baseline_model import Baseline20M
-from model.samatnext_20m import SamatNext20M
+from model.config_120m import Baseline120MConfig, SamatNext120MConfig
+from model.baseline_model import BaselineModel
+from model.samatnext_model import SamatNextModel
 from train.experiment_trainer import ExperimentTrainer, MAX_STEPS
 from eval.experiment_eval import run_full_eval
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Run 20M Validation Experiment")
+    parser = argparse.ArgumentParser(description="Run 120M Validation Experiment")
     parser.add_argument(
         "--tokenizer_path",
         type=str,
@@ -42,7 +42,7 @@ def parse_args():
     parser.add_argument(
         "--output_dir",
         type=str,
-        default="results/experiment_20m",
+        default="results/experiment_120m",
         help="Output directory for logs and models",
     )
     parser.add_argument(
@@ -61,7 +61,7 @@ def parse_args():
 
 
 def run_experiment(args):
-    print("Starting 20M Validation Experiment")
+    print("Starting 120M Validation Experiment")
     print(f"Device: {mx.default_device()}")
     
     output_dir = Path(args.output_dir)
@@ -90,7 +90,7 @@ def run_experiment(args):
     results = []
     
     for seed in args.seeds:
-        for model_type in ["Baseline-20M", "SamatNext-20M"]:
+        for model_type in ["Baseline-120M", "SamatNext-120M"]:
             print(f"\n{'='*50}")
             print(f"Running {model_type} with seed {seed}")
             print(f"{'='*50}")
@@ -99,12 +99,12 @@ def run_experiment(args):
             mx.random.seed(seed)
             
             # 1. Config & Model
-            if model_type == "Baseline-20M":
-                config = Baseline20MConfig()
-                model = Baseline20M(config)
+            if model_type == "Baseline-120M":
+                config = Baseline120MConfig()
+                model = BaselineModel(config)
             else:
-                config = SamatNext20MConfig()
-                model = SamatNext20M(config)
+                config = SamatNext120MConfig()
+                model = SamatNextModel(config)
                 
             print(f"{model_type} params: {model.count_params():,}")
             

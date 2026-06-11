@@ -1,4 +1,4 @@
-"""Analyzes 20M Validation Experiment results and outputs a summary table."""
+"""Analyzes 120M Validation Experiment results and outputs a summary table."""
 
 import argparse
 import json
@@ -11,7 +11,7 @@ def main():
     parser.add_argument(
         "--results_dir",
         type=str,
-        default="results/experiment_20m",
+        default="results/experiment_120m",
         help="Path to the experiment output directory",
     )
     args = parser.parse_args()
@@ -36,7 +36,7 @@ def main():
 
     # Print summary table
     print("\n" + "="*80)
-    print("20M VALIDATION EXPERIMENT RESULTS")
+    print("120M VALIDATION EXPERIMENT RESULTS")
     print("="*80)
     print(f"{'Model':<20} | {'Params':<12} | {'Val Loss':<10} | {'Val PPL':<10} | {'Seeds':<15}")
     print("-" * 80)

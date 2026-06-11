@@ -3,12 +3,9 @@ import time
 import argparse
 import mlx.core as mx
 import mlx.nn as nn
-from mlx.utils import tree_flatten, tree_map
-
-# We reuse the 20M classes but pass them the 120M configs
 from model.config_120m import Baseline120MConfig, SamatNext120MConfig
-from model.baseline_model import Baseline20M as BaselineModel
-from model.samatnext_20m import SamatNext20M as SamatNextModel
+from model.baseline_model import BaselineModel
+from model.samatnext_model import SamatNextModel
 
 def profile_model(model_name: str, batch_size: int, seq_len: int, steps: int = 10, accum_steps: int = 4):
     print(f"\n{'='*50}\nProfiling {model_name} (BS={batch_size}, Seq={seq_len}, Accum={accum_steps})\n{'='*50}")

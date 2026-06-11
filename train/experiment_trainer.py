@@ -1,4 +1,4 @@
-"""Shared training loop for the 20M Validation Experiment."""
+"""Shared training loop for the 120M Validation Experiment."""
 
 import time
 import math
@@ -11,7 +11,7 @@ import mlx.optimizers as optim
 from mlx.utils import tree_flatten, tree_map
 
 from data.dataset import BatchOutput, PythonCodeDataset
-from model.config_20m import Experiment20MConfig
+from model.config_120m import Experiment120MConfig
 
 # Constants for the experiment
 BATCH_SIZE = 4
@@ -33,7 +33,7 @@ def build_experiment_optimizer() -> optim.AdamW:
 
 
 class ExperimentScheduler:
-    def __init__(self, config: Experiment20MConfig, max_steps: int):
+    def __init__(self, config: Experiment120MConfig, max_steps: int):
         self.base_lr = 3e-4
         self.warmup_steps = config.warmup_steps
         self.max_steps = max_steps
@@ -54,7 +54,7 @@ class ExperimentTrainer:
     def __init__(
         self,
         model: nn.Module,
-        config: Experiment20MConfig,
+        config: Experiment120MConfig,
         output_dir: str,
         seed: int,
         max_steps: int = MAX_STEPS,

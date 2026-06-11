@@ -1,15 +1,15 @@
-"""Standard decoder-only Transformer for 20M Validation Experiment."""
+"""Standard decoder-only Baseline Transformer model."""
 
 import math
 import mlx.core as mx
 import mlx.nn as nn
 
-from model.config_20m import Baseline20MConfig
+from model.config_120m import Baseline120MConfig
 from model.mlp import SwiGLUMLP
 
 
 class StandardAttention(nn.Module):
-    def __init__(self, config: Baseline20MConfig):
+    def __init__(self, config: Baseline120MConfig):
         super().__init__()
         self.n_heads = config.n_heads
         self.n_kv_heads = config.n_kv_heads
@@ -54,7 +54,7 @@ class StandardAttention(nn.Module):
 
 
 class TransformerBlock(nn.Module):
-    def __init__(self, config: Baseline20MConfig):
+    def __init__(self, config: Baseline120MConfig):
         super().__init__()
         self.attn = StandardAttention(config)
         self.attn_norm = nn.RMSNorm(config.d_model)
@@ -67,8 +67,8 @@ class TransformerBlock(nn.Module):
         return x
 
 
-class Baseline20M(nn.Module):
-    def __init__(self, config: Baseline20MConfig):
+class BaselineModel(nn.Module):
+    def __init__(self, config: Baseline120MConfig):
         super().__init__()
         self.config = config
         self.embed = nn.Embedding(config.vocab_size, config.d_model)

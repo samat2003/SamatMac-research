@@ -11,8 +11,8 @@ import mlx.core as mx
 from data.tokenizer import SamatNextTokenizer
 from data.dataset import PythonCodeDataset
 from model.config_120m import Baseline120MConfig, SamatNext120MConfig
-from model.baseline_model import Baseline20M as BaselineModel
-from model.samatnext_20m import SamatNext20M as SamatNextModel
+from model.baseline_model import BaselineModel
+from model.samatnext_model import SamatNextModel
 from train.experiment_trainer import ExperimentTrainer
 
 def test_model_speed(model_name: str):

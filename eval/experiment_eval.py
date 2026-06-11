@@ -1,9 +1,9 @@
-"""Shared evaluation harness for the 20M Validation Experiment."""
+"""Shared evaluation harness for the 120M Validation Experiment."""
 
 import mlx.core as mx
 import mlx.nn as nn
 from data.tokenizer import SamatNextTokenizer
-from model.config_20m import Experiment20MConfig
+from model.config_120m import Experiment120MConfig
 
 PROMPTS = [
     "def fibonacci(n):",
